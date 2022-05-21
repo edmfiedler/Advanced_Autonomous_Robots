@@ -1,3 +1,5 @@
+# Setup based on a provided VM
+
 Put the plugins relocate and scanright into the folder:
 
 /home/smr/mobotware/aurs-plugins
@@ -33,6 +35,8 @@ Next, open another terminal and load the script:
 
 mrc -s8000 course_graphplanner
 
+# Route planning
+
 The robot will go to whatever guidemark is specified as rt[0] first (set to
 12), and will then read the gmno of that guidemark in simconfigcourse.xml 
 to decide to which guidemark it is going to navigate to next. 
@@ -49,6 +53,8 @@ the robot.
 The navigation works by knowing the positions it should drive to to see the
 guidemark in the arrays gmx and gmy and the actual position of the guidemark
 in the arrays gx and gy, in order to face the guidemark.
+
+# Scanning 
 
 After reading the gmno of guidemark 13 or 14, the robot goes roughly into 
 the position (2,2.25,-1.57) and starts the object detection. It first uses
