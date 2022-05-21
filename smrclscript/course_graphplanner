@@ -1,0 +1,813 @@
+laser "addline startx=0.0  starty=0.0 endx=0.0 endy=1.8"
+laser "addline startx=0.0  starty=0.0 endx=1.8 endy=0.0"
+laser "addline startx=2.2  starty=0.0 endx=4.0 endy=0.0"
+laser "addline startx=4.0  starty=0.0 endx=4.0 endy=1.8"
+laser "addline startx=0.0  starty=3.2 endx=0.0 endy=5.0"
+laser "addline startx=0.0  starty=5.0 endx=1.8 endy=5.0"
+laser "addline startx=2.2  starty=5.0 endx=4.0 endy=5.0"
+laser "addline startx=4.0  starty=5.0 endx=4.0 endy=3.2"
+laser "addline startx=1.7  starty=2.5 endx=1.7 endy=3.1"
+laser "addline startx=1.7  starty=3.1 endx=0.9 endy=3.1"
+laser "addline startx=0.9  starty=3.1 endx=0.9 endy=4.3"
+laser "addline startx=0.9  starty=4.3 endx=3.1 endy=4.3"
+laser "addline startx=3.1  starty=4.3 endx=3.1 endy=3.1"
+laser "addline startx=3.1  starty=3.1 endx=2.3 endy=3.1"
+laser "addline startx=2.3  starty=3.1 endx=2.3 endy=2.5"
+laser "addline startx=1.5  starty=3.7 endx=2.5 endy=3.7"
+laser "addline startx=2.0  starty=3.7 endx=2.0 endy=4.3"
+
+laser "setinitpose x=0.35 y=0.35 th=0.0"
+laser "setinitcov Cx=0.001 Cy=0.001 Cth=0.001"    
+
+laser "push t='1.0' cmd='localize'"
+
+laser "resetplanner"
+
+laser "addpoint pno=1 x=0.35 y=4.65"
+laser "addpoint pno=2 x=2 y=4.65"
+laser "addpoint pno=3 x=3.65 y=4.65"
+laser "addpoint pno=4 x=1.2 y=4"
+laser "addpoint pno=5 x=1.6 y=4"
+laser "addpoint pno=6 x=2.4 y=4"
+laser "addpoint pno=7 x=2.8 y=4"
+laser "addpoint pno=8 x=1.2 y=3.4"
+laser "addpoint pno=9 x=2 y=3.4"
+laser "addpoint pno=10 x=2.8 y=3.4"
+laser "addpoint pno=11 x=-0.35 y=3.5"
+laser "addpoint pno=12 x=0.35 y=3.5"
+laser "addpoint pno=13 x=3.65 y=3.5"
+laser "addpoint pno=14 x=4.35 y=3.5"
+laser "addpoint pno=15 x=-0.35 y=2.75"
+laser "addpoint pno=16 x=0.35 y=2.75"
+laser "addpoint pno=17 x=3.65 y=2.75"
+laser "addpoint pno=18 x=4.35 y=2.75"
+laser "addpoint pno=19 x=-0.35 y=2.25"
+laser "addpoint pno=20 x=0.35 y=2.25"
+laser "addpoint pno=21 x=0.75 y=2.25"
+laser "addpoint pno=22 x=2 y=2.25"
+laser "addpoint pno=23 x=3.25 y=2.25"
+laser "addpoint pno=24 x=3.65 y=2.25"
+laser "addpoint pno=25 x=4.35 y=2.25"
+laser "addpoint pno=26 x=-0.35 y=1.5"
+laser "addpoint pno=27 x=0.35 y=1.5"
+laser "addpoint pno=28 x=3.65 y=1.5"
+laser "addpoint pno=29 x=4.35 y=1.5"
+laser "addpoint pno=30 x=0.75 y=0.75"
+laser "addpoint pno=31 x=3.25 y=0.75"
+laser "addpoint pno=32 x=0.35 y=0.35"
+laser "addpoint pno=33 x=2 y=0.35"
+laser "addpoint pno=34 x=3.65 y=0.35"
+
+laser "addcon pno1=1 pno2=2"
+laser "addcon pno1=2 pno2=1"
+
+laser "addcon pno1=3 pno2=2"
+laser "addcon pno1=2 pno2=3"
+
+laser "addcon pno1=1 pno2=12"
+laser "addcon pno1=12 pno2=1"
+
+laser "addcon pno1=3 pno2=13"
+laser "addcon pno1=13 pno2=3"
+
+laser "addcon pno1=4 pno2=5"
+laser "addcon pno1=5 pno2=4"
+
+laser "addcon pno1=6 pno2=7"
+laser "addcon pno1=7 pno2=6"
+
+laser "addcon pno1=4 pno2=8"
+laser "addcon pno1=8 pno2=4"
+
+laser "addcon pno1=7 pno2=10"
+laser "addcon pno1=10 pno2=7"
+
+laser "addcon pno1=8 pno2=9"
+laser "addcon pno1=9 pno2=8"
+
+laser "addcon pno1=10 pno2=9"
+laser "addcon pno1=9 pno2=10"
+
+laser "addcon pno1=9 pno2=22"
+laser "addcon pno1=22 pno2=9"
+
+laser "addcon pno1=11 pno2=15"
+laser "addcon pno1=15 pno2=11"
+
+laser "addcon pno1=12 pno2=16"
+laser "addcon pno1=16 pno2=12"
+
+laser "addcon pno1=13 pno2=17"
+laser "addcon pno1=17 pno2=13"
+
+laser "addcon pno1=14 pno2=18"
+laser "addcon pno1=18 pno2=14"
+
+laser "addcon pno1=15 pno2=19"
+laser "addcon pno1=19 pno2=15"
+
+laser "addcon pno1=15 pno2=16"
+laser "addcon pno1=16 pno2=15"
+
+laser "addcon pno1=20 pno2=19"
+laser "addcon pno1=19 pno2=20"
+
+laser "addcon pno1=15 pno2=20"
+laser "addcon pno1=20 pno2=15"
+
+laser "addcon pno1=16 pno2=19"
+laser "addcon pno1=19 pno2=16"
+
+laser "addcon pno1=16 pno2=20"
+laser "addcon pno1=20 pno2=16"
+
+laser "addcon pno1=21 pno2=20"
+laser "addcon pno1=20 pno2=21"
+
+laser "addcon pno1=21 pno2=22"
+laser "addcon pno1=22 pno2=21"
+
+laser "addcon pno1=22 pno2=23"
+laser "addcon pno1=23 pno2=22"
+
+laser "addcon pno1=23 pno2=24"
+laser "addcon pno1=24 pno2=23"
+
+laser "addcon pno1=24 pno2=25"
+laser "addcon pno1=25 pno2=24"
+
+laser "addcon pno1=17 pno2=24"
+laser "addcon pno1=24 pno2=17"
+
+laser "addcon pno1=17 pno2=25"
+laser "addcon pno1=25 pno2=17"
+
+laser "addcon pno1=17 pno2=18"
+laser "addcon pno1=18 pno2=17"
+
+laser "addcon pno1=24 pno2=18"
+laser "addcon pno1=18 pno2=24"
+
+laser "addcon pno1=18 pno2=25"
+laser "addcon pno1=25 pno2=18"
+
+laser "addcon pno1=19 pno2=26"
+laser "addcon pno1=26 pno2=19"
+
+laser "addcon pno1=20 pno2=27"
+laser "addcon pno1=27 pno2=20"
+
+laser "addcon pno1=21 pno2=30"
+laser "addcon pno1=30 pno2=21"
+
+laser "addcon pno1=23 pno2=31"
+laser "addcon pno1=31 pno2=23"
+
+laser "addcon pno1=24 pno2=28"
+laser "addcon pno1=28 pno2=24"
+
+laser "addcon pno1=29 pno2=25"
+laser "addcon pno1=25 pno2=29"
+
+laser "addcon pno1=27 pno2=32"
+laser "addcon pno1=32 pno2=27"
+
+laser "addcon pno1=30 pno2=32"
+laser "addcon pno1=32 pno2=30"
+
+laser "addcon pno1=30 pno2=31"
+laser "addcon pno1=31 pno2=30"
+
+laser "addcon pno1=31 pno2=34"
+laser "addcon pno1=34 pno2=31"
+
+laser "addcon pno1=28 pno2=34"
+laser "addcon pno1=34 pno2=28"
+
+laser "addcon pno1=32 pno2=33"
+laser "addcon pno1=33 pno2=32"
+
+laser "addcon pno1=33 pno2=34"
+laser "addcon pno1=34 pno2=33"
+
+laser "calculatecost"
+
+array "gmx" 14
+array "gmy" 14
+array "gmth" 14
+pi=3.1416
+gmx[0]=-0.2
+gmx[1]=0.2
+gmx[2]=3.8
+gmx[3]=4.2
+gmx[4]=-0.2
+gmx[5]=0.2
+gmx[6]=3.8
+gmx[7]=4.2
+gmx[8]=0.35
+gmx[9]=3.65
+gmx[10]=0.35
+gmx[11]=3.65
+gmx[12]=1.8
+gmx[13]=2.2
+
+gmy[0]=1.5
+gmy[1]=1.5
+gmy[2]=1.5
+gmy[3]=1.5
+gmy[4]=3.5
+gmy[5]=3.5
+gmy[6]=3.5
+gmy[7]=3.5
+gmy[8]=4.65
+gmy[9]=4.65
+gmy[10]=4.65
+gmy[11]=4.65
+gmy[12]=4
+gmy[13]=4
+
+gmth[0]=0
+gmth[1]=pi
+gmth[2]=0
+gmth[3]=pi
+gmth[4]=0
+gmth[5]=pi
+gmth[6]=0
+gmth[7]=pi
+gmth[8]=pi
+gmth[9]=0
+gmth[10]=pi/2
+gmth[11]=pi/2
+gmth[12]=0
+gmth[13]=pi
+
+array "gx" 14
+array "gy" 14
+gx[0]=0
+gx[1]=0
+gx[2]=4
+gx[3]=4
+gx[4]=0
+gx[5]=0
+gx[6]=4
+gx[7]=4
+gx[8]=0
+gx[9]=4
+gx[10]=0.5
+gx[11]=3.5
+gx[12]=2
+gx[13]=2
+
+gy[0]=1.5
+gy[1]=1.5
+gy[2]=1.5
+gy[3]=1.5
+gy[4]=3.5
+gy[5]=3.5
+gy[6]=3.5
+gy[7]=3.5
+gy[8]=4.5
+gy[9]=4.5
+gy[10]=5
+gy[11]=5
+gy[12]=4
+gy[13]=4
+
+array "rt" 10
+rt[0]=2
+
+i = 0
+x0 = 0.35
+y0 = 0.35
+label "route"
+n = rt[i]
+x1 = gmx[n-1]
+y1 = gmy[n-1]
+stringcat "findroute startx=" x0 " starty=" y0 " endx=" x1 " endy=" y1 
+laser "$string"
+wait 2
+call "nav"
+stop
+call "faceguide"
+pn = n
+x0 = gmx[pn-1]
+y0 = gmy[pn-1]
+i = i+1
+wait 1
+%get "guidemark"
+rt[i] = $fiducialid
+
+wait 2
+stringcat $fiducialid
+if (rt[i]>20) "detectobject"
+if (rt[i]<0) "home"
+if (i<10) "route"
+
+label "detectobject"
+stringcat "findroute startx=" x0 " starty=" y0 " endx=2 endy=2.25"
+laser "$string"
+wait 2
+call "nav"
+stop
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
+t1 = $res0
+t2 = $res1
+stringcat t1 t2
+wait 1
+call "determine"
+x0 = posx
+y0 = posy
+goto "home"
+
+label "home"
+stringcat "findroute startx=" x0 " starty=" y0 " endx=0.35 endy=0.35"
+laser "$string"
+wait 2
+if (posx>3.15 | posx<0.65) "skipcheckr"
+if (posy>2.15 | posy<0.65) "skipcheckr"
+turn 180
+posa = posa+3.1416
+r1 = (2.15-posy)/sin(posa)
+if (r1>10 | r1<0) "limr1"
+label "endlimr1"
+r2 = (0.65-posx)/cos(posa)
+if (r2>10 | r2<0) "limr2"
+label "endlimr2"
+r3 = (0.65-posy)/sin(posa)
+if (r3>10 | r3<0) "limr3"
+label "endlimr3"
+r4 = (3.15-posx)/cos(posa)
+if (r4>10 | r4<0) "limr4"
+label "endlimr4"
+if (r1<10) "checkr1"
+if (r2<10) "checkr2"
+if (r3<10) "checkr3"
+if (r4<10) "checkr4"
+label "endcheckr"
+ignoreobstacles
+fwd r
+label "skipcheckr"
+call "navhome"
+stop
+
+goto "end"
+
+label "checkr1"
+if (r2<r1 & r2 < 10) "decider2"
+if (r4<r1 & r4 < 10) "decider4"
+r = r1
+goto "endcheckr"
+
+label "checkr2"
+if (r1<r2 & r1 < 10) "decider1"
+if (r3<r2 & r3 < 10) "decider3"
+r = r2
+goto "endcheckr"
+
+label "checkr3"
+if (r2<r3 & r2 < 10) "decider2"
+if (r4<r3 & r4 < 10) "decider4"
+r = r3
+goto "endcheckr"
+
+label "checkr4"
+if (r1<r4 & r1 < 10) "decider1"
+if (r3<r4 & r3 < 10) "decider3"
+r = r4
+goto "endcheckr"
+
+label "decider1"
+r = r1
+goto "endcheckr"
+
+label "decider2"
+r = r2
+goto "endcheckr"
+
+label "decider3"
+r = r3
+goto "endcheckr"
+
+label "decider4"
+r = r4
+goto "endcheckr"
+
+
+label "limr1"
+r1 = 10
+goto "endlimr1"
+
+label "limr2"
+r2 = 10
+goto "endlimr2"
+
+label "limr3"
+r3 = 10
+goto "endlimr3"
+
+label "limr4"
+r4 = 10
+goto "endlimr4"
+
+label "nav"
+N = $l4
+N = N - 1
+if (N<0) "becomezero"
+label "becomezerocont"
+stringcat "getpoint p=" N
+laser "$string"
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
+opp = $l6 - $res1
+adj = $l5 - $res0
+ang = atan2(opp,adj)-$res2
+ang = normalizeanglerad(ang)
+turn ang "rad"
+
+label "loopnav"
+stringcat "getpoint p=" N
+laser "$string"
+ignoreobstacles
+drivew $l5 $l6 $l7 "rad" :($targetdist<0.275)
+N = N-1
+if (N>0) "loopnav"
+
+laser "getpoint p=0"
+ignoreobstacles
+drivew $l5 $l6 $l7 "rad" :($targetdist<0.0)
+return
+
+label "becomezero"
+N = 0
+goto "becomezerocont"
+
+label "navhome"
+stop
+N = $l4
+N = N - 1
+if (N<0) "becomezero"
+label "becomezerocont"
+stringcat "getpoint p=" N
+laser "$string"
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
+opp = $l6 - $res1
+adj = $l5 - $res0
+ang = atan2(opp,adj)-$res2
+ang = normalizeanglerad(ang)
+turn ang "rad"
+
+label "loopnavhome"
+stringcat "getpoint p=" N
+laser "$string"
+ignoreobstacles
+drivew $l5 $l6 $l7 "rad" :($targetdist<0.2)
+N = N-1
+if (N>0) "loopnavhome"
+
+laser "getpoint p=0"
+ignoreobstacles
+drivew $l5 $l6 $l7 "rad" :($targetdist<0.0)
+return
+
+label "faceguide"
+wait 2
+invtrans $l0 $l1 $l2 $odox $odoy $odoth
+opp = gy[n-1] - $res1
+adj = gx[n-1] - $res0
+ang = atan2(opp,adj)-$res2
+ang = normalizeanglerad(ang)
+turn ang "rad"
+return
+
+label "determine"
+skipposup = 0
+laser "relocate"
+wait 1
+
+rx = $l6
+turn 90
+fwd rx
+ry = -$l7
+turn -90
+ignoreobstacles
+if (ry<0) "noback"
+label "nobackend"
+fwd ry
+ra = $l8 - -1.5708
+turn ra "rad"
+
+posx = $l6+$res0
+posy = -ry+$res1
+posa = normalizeanglerad($l8)
+stringcat "x " posx "y " posy "z " posa
+
+array "scx" 5
+array "scy" 5
+
+i = 0
+label "scanpoints"
+stop
+wait 2
+laser "scanright"
+wait 2
+
+% Find scan coordinates
+scr = $l5
+sca = $l6
+xr = scr*cos(sca)
+yr = -0.26+scr*sin(sca)
+rr = sqrt(xr*xr+yr*yr)
+ar = atan2(yr,xr)
+ar = ar + 1.5708 + posa
+xr = rr*cos(ar)
+yr = rr*sin(ar)
+scx[i] = xr+posx
+scy[i] = yr+posy
+
+t1 = scx[i]
+t2 = scy[i]
+stringcat posx posy posa t1 t2
+
+% Reposition
+rx = $l7
+ry = -$l8
+yhigh = posy-rx*sin(posa-3.1416/2)
+stringcat yhigh
+if (yhigh>2.3) "yhighcond"
+turn 90
+fwd rx
+turn -90
+fwd ry
+turn 90
+label "yhighcondend"
+goto "updatepos"
+
+label "yhighcond"
+nrx = (posy-2.25)/sin(posa-3.1416/2)
+gam = -(posa+3.1416/2)
+yback = 2.25-yhigh+ry*sin(posa+3.1416)
+nry = yback/sin(posa+3.1416)
+if (nry<0) "nobacky"
+nhx = -sqrt((ry-nry)*(ry-nry)+(rx-nrx)*(rx-nrx))
+label "endnobacky"
+turn 90
+fwd nrx
+turn gam "rad"
+fwd nhx
+normpa = normalizeanglerad(posa)
+if (normpa>0) "turnneg"
+label "turnnegend"
+turn normpa "rad"
+fwd nry
+turn 90
+goto "yhighcondend"
+
+label "nobacky"
+nhx = -sqrt((ry-nry)*(ry-nry)+(rx-nrx)*(rx-nrx))-nry*cos(posa+3.1416)
+nry = 0
+skipposup = 1
+goto "endnobacky"
+
+label "skippos"
+stringcat posx nhx nrx posa
+posx = posx+nhx+nrx*cos(posa+3.1416/2)
+stringcat posx
+posy = 2.25
+skipposup = 0
+goto "skipposend"
+
+label "turnneg"
+normpa = normpa-3.1416*2
+goto "turnnegend"
+
+label "updatepos"
+% Update position
+rp = sqrt(rx*rx+ry*ry)
+ra = atan2(-ry,rx)+1.5708+posa
+if (skipposup == 1) "skippos"
+posx = posx+rp*cos(ra)
+posy = posy+rp*sin(ra)
+label "skipposend"
+posa = posa+1.5708
+
+i = i + 1
+
+if (i<3) "scanpoints"
+stop
+
+% Scan final corner
+laser "scanright"
+wait 1
+scr = $l5
+sca = $l6
+xr = scr*cos(sca)
+yr = -0.26+scr*sin(sca)
+rr = sqrt(xr*xr+yr*yr)
+ar = atan2(yr,xr)
+ar = ar + 1.5708 + posa
+xr = rr*cos(ar)
+yr = rr*sin(ar)
+scx[i] = xr+posx
+scy[i] = yr+posy
+
+% Filter out double scanned corners
+array "recx" 5
+array "recy" 5
+scx[4] = scx[0]
+scy[4] = scy[0]
+skip = 0
+k = 0
+i = 0
+label "filter"
+if (skip==1) "skipcond"
+dx = scx[i]-scx[i+1]
+dy = scy[i]-scy[i+1]
+mag = sqrt(dx*dx+dy*dy)
+stringcat mag
+if (mag<0.05) "filtercond"
+recx[k] = scx[i]
+recy[k] = scy[i]
+k = k + 1
+label "filtercontinue"
+i = i + 1
+stringcat i
+if (i<4) "filter"
+goto "filterend"
+
+label "skipcond"
+skip = 0
+goto "filtercontinue"
+
+label "filtercond"
+if (i == 3) "filtercontinue"
+mx = (scx[i]+scx[i+1])/2
+my = (scy[i]+scy[i+1])/2
+skip = 1
+recx[k] = mx
+recy[k] = my
+k = k + 1
+goto "filtercontinue"
+
+label "filterend"
+
+recx[k] = recx[0]
+recy[k] = recy[0]
+k = k + 1
+
+% Reverse order of reclist
+array "revx" k
+array "revy" k
+i = 0
+k = k - 1
+label "reverse"
+revx[i] = recx[k-i]
+revy[i] = recy[k-i]
+t1 = revx[i]
+t2 = revy[i]
+stringcat t1 t2
+i = i + 1
+if (i<(k+1)) "reverse"
+stringcat i
+
+begrev = revx[0]
+midrev = revx[1]
+midrec = recx[1]
+revend = revx[i-2]
+endrev = revx[i-1]
+stringcat begrev endrev midrev midrec revend
+
+% Determine magnitude & angle sum
+array "mags" k
+array "dang" k
+ck = k + 1
+array "angs" ck
+stringcat k
+
+i = 0
+dang = 0
+label "magang"
+dx = revx[i+1]-revx[i]
+dy = revy[i+1]-revy[i]
+mags[i] = sqrt(dx*dx+dy*dy)
+angs[i] = atan2(dy,dx)
+i = i + 1
+if (i<k) "magang"
+
+angs[i] = angs[0]
+
+
+j = 0
+sumangs = 0
+label "sumang"
+dang[j] = abs(normalizeanglerad(angs[j+1]-angs[j]+3.1416))
+sumangs = sumangs + dang[j]
+ang = dang[j]
+stringcat ang
+j = j + 1
+if (j<i) "sumang"
+
+% Classify
+if (sumangs>4.5) "rectangle"
+if (sumangs<4.5) "triangle"
+
+label "rectangle"
+ox = (revx[0]+revx[1]+revx[2]+revx[3])/4
+oy = (revy[0]+revy[1]+revy[2]+revy[3])/4
+i = -1
+label "findsmallside"
+i = i + 1
+if (mags[i]>mags[i+1]) "findsmallside"
+
+npx = (revx[i]+revx[i+1])/2
+npy = (revy[i]+revy[i+1])/2
+ori = atan2(npy-oy,npx-ox)
+
+if (mags[i+1]<0.35) "smallrec"
+if (mags[i+1]>0.35) "bigrec"
+label "reccontinue"
+
+goto "enddetect"
+
+label "smallrec"
+stringcat "Rectangle 0.3x0.2 (" ox ", " oy ", " ori ")"
+wait 10
+goto "reccontinue"
+
+label "bigrec"
+stringcat "Rectangle 0.4x0.15 (" ox ", " oy ", " ori ")"
+wait 10
+goto "reccontinue"
+
+
+
+label "triangle"
+
+if (dang[0]>dang[1]) "zerobigger"
+if (dang[1]>dang[0]) "onebigger"
+if (dang[2]>dang[1]) "twobigger"
+
+
+label "foundninety"
+ox = revx[i+1]
+oy = revy[i+1]
+
+i = -1
+label "findsmallang"
+i = i + 1
+if (dang[i]>0.8) "findsmallang"
+npx = revx[i+1]
+npy = revy[i+1]
+ori = atan2(npy-oy,npx-ox)
+
+dx = ox-npx
+dy = oy-npy
+magtri = sqrt(dx*dx+dy*dy)
+if (magtri>0.35) "bigtri"
+if (magtri<0.35) "smalltri"
+
+label "tricontinue"
+goto "enddetect"
+
+label "zerobigger"
+if (dang[0]>dang[2]) "zerobiggest"
+if (dang[0]<dang[2]) "twobiggest"
+
+label "onebigger"
+if (dang[1]>dang[2]) "onebiggest"
+if (dang[1]<dang[2]) "twobiggest"
+
+label "twobigger"
+if (dang[2]>dang[0]) "twobiggest"
+if (dang[2]<dang[0]) "zerobiggest"
+
+label "zerobiggest"
+i = 0
+goto "foundninety"
+
+label "onebiggest"
+i = 1
+goto "foundninety"
+
+label "twobiggest"
+i = 2
+goto "foundninety"
+
+label "bigtri"
+stringcat "Triangle 0.4x0.1 (" ox ", " oy ", " ori ")"
+wait 10
+goto "tricontinue"
+
+label "smalltri"
+stringcat "Triangle 0.3x0.15 (" ox ", " oy ", " ori ")"
+wait 10
+goto "tricontinue"
+
+label "enddetect"
+return
+
+label "noback"
+ry = 0
+goto "nobackend"
+
+label "end"
+
+stop
